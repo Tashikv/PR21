@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegIN_Vozhakova.Elements;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -22,9 +23,20 @@ namespace RegIN_Vozhakova.Pages
     {
         string OldLogin;
         bool IsCapture = false;
+        public ElementCapture Capture { get; }
         public Recovery()
         {
             InitializeComponent();
+            var capture = new ElementCapture
+            {
+                Width = 280,
+                Height = 100,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Top,
+                Margin = new Thickness(10, 213, 10, 0)
+            };
+            innerGrid.Children.Add(capture);
+            Capture = capture;
             MainWindow.mainWindow.UserLogIn.HandlerCorrectLogin += CorrectLogin;
             MainWindow.mainWindow.UserLogIn.HandlerInCorrectLogin += InCorrectLogin;
             Capture.HandlerCorrectCapture += CorrectCapture;

@@ -31,7 +31,7 @@
                     Margin="32"
                     VerticalAlignment="Top"
                     Width="100"
-                    Source="/Images/ic-user.png"
+                    Source="/Images/ic_user.png"
                     MouseDown="SelectImage">
                     <Image.Clip>
                         <EllipseGeometry

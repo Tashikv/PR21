@@ -31,7 +31,7 @@
                     Margin="32"
                     VerticalAlignment="Top"
                     Width="100"
-                    Source="/Images/ic-user.png">
+                    Source="/Images/ic_user.png">
 
                     <Image.Clip>
                         <EllipseGeometry
@@ -59,13 +59,9 @@
                     VerticalAlignment="Top"
                     KeyUp="SetLogin"
                     LostFocus="SetLogin"/>
-                <uc:ElementCapture
-                    x:Name="Capture"
-                    HorizontalAlignment="Center"
-                    Width="280"
-                    Margin="10,213,18,0"
-                    Height="100"
-                    VerticalAlignment="Top"/>
+                <Grid x:Name="innerGrid">
+                    
+                </Grid>
                 <Label
                     Content="Back"
                     Margin="10,318,10,0"
